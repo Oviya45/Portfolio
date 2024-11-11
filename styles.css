@@ -54,14 +54,14 @@ body {
 
 .cover-page {
   height: 100vh;
-  background: linear-gradient(135deg, rgba(255, 108, 145, 0.8), rgba(255, 182, 193, 0.8)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+  background: linear-gradient(135deg, rgba(255, 108, 145, 0.8), rgba(255, 182, 193, 0.8)),
+    url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   text-align: center;
   position: relative;
-  overflow: hidden;
   padding: 0 20px;
 }
 
@@ -69,14 +69,12 @@ body {
   font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
-  animation: fadeIn 2s ease-out;
 }
 
 .cover-page p {
   font-size: 1.2rem;
   font-weight: 300;
   margin: 20px 0;
-  animation: fadeInText 2s 1s forwards;
 }
 
 .cover-page .btn {
@@ -86,28 +84,12 @@ body {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  animation: fadeInBtn 2s 1.5s forwards;
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .cover-page .btn:hover {
   background-color: #ff8fab;
   transform: scale(1.05);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeInText {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeInBtn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 .content-section {
@@ -172,41 +154,41 @@ body {
 }
 
 .project-item p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  color: #666;
   line-height: 1.6;
-  color: #555;
 }
 
 .project-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.contact-form input, .contact-form textarea {
-  padding: 10px;
-  font-size: 1rem;
+.contact-form input,
+.contact-form textarea {
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  width: 100%;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  resize: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff6f91;
 }
 
 .contact-form button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
+  padding: 1.2rem;
   background-color: #ff6f91;
-  color: #fff;
+  color: white;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
@@ -215,12 +197,75 @@ body {
 
 footer {
   text-align: center;
-  padding: 1.5rem 0;
-  background-color: #2e3a59;
+  padding: 1.5rem;
+  background: #2e3a59;
   color: #fff;
-  font-size: 1rem;
+  margin-top: 40px;
 }
 
-footer p {
-  margin: 0;
+@media (max-width: 1024px) {
+  .cover-page h1 {
+    font-size: 3.5rem;
+  }
+  .cover-page p {
+    font-size: 1.1rem;
+  }
+  .header {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header .logo {
+    font-size: 1.8rem;
+  }
+  .header nav ul {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding-top: 10px;
+  }
+  .header nav ul li a {
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+  }
+  .cover-page h1 {
+    font-size: 2.8rem;
+  }
+  .cover-page p {
+    font-size: 1rem;
+  }
+  .content-section h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 15px;
+  }
+  .header .logo {
+    font-size: 1.5rem;
+  }
+  .header nav ul li a {
+    font-size: 0.9rem;
+  }
+  .cover-page h1 {
+    font-size: 2.2rem;
+  }
+  .cover-page p {
+    font-size: 0.9rem;
+  }
+  .content-section h2 {
+    font-size: 2rem;
+  }
+  .skill-item {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
 }
