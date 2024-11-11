@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oviya M.S - Portfolio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Oviya M.S</div>
+    <nav>
+      <ul>
+        <li><a href="javascript:void(0);" onclick="scrollToSection('about')">About</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToSection('skills')">Skills</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToSection('projects')">Projects</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToSection('contact')">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="cover-page">
+    <div>
+      <h1>Welcome to My Portfolio</h1>
+      <p>Student at Chennai Institute of Technology</p>
+      <button class="btn" onclick="scrollToSection('about')">Get Started</button>
+    </div>
+  </section>
+
+  <div id="about" class="content-section">
+    <h2>About Me</h2>
+    <p>Hello! I’m Oviya M.S., a passionate and driven second-year student at Chennai Institute of Technology, with a focus on web development and software engineering...</p>
+  </div>
+
+  <div id="skills" class="content-section">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill-item">C</div>
+      <div class="skill-item">C++</div>
+      <div class="skill-item">Java</div>
+      <div class="skill-item">Python</div>
+      <div class="skill-item">JavaScript</div>
+      <div class="skill-item">HTML</div>
+      <div class="skill-item">CSS</div>
+      <div class="skill-item">React</div>
+      <div class="skill-item">Node.js</div>
+      <div class="skill-item">SQL</div>
+    </div>
+  </div>
+
+  <div id="projects" class="projects content-section">
+    <h2>My Projects</h2>
+    <div class="project-item">
+      <h3>Weather App</h3>
+      <p>A dynamic weather application built with HTML, CSS, and JavaScript...</p>
+    </div>
+    <div class="project-item">
+      <h3>Hotel Management (C++)</h3>
+      <p>A simple hotel management system built in C++...</p>
+    </div>
+    <div class="project-item">
+      <h3>Bank Account System (C++)</h3>
+      <p>A command-line application in C++ to manage bank account operations...</p>
+    </div>
+    <div class="project-item">
+      <h3>Virtual Health Assistant (Python)</h3>
+      <p>A Python-based virtual assistant designed to provide basic health advice...</p>
+    </div>
+  </div>
+
+  <div id="contact" class="content-section">
+    <h2>Contact</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2024 Oviya M.S. | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
